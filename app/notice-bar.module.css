@@ -1,0 +1,10 @@
+.bar { min-height:34px; padding:5px 4vw; display:flex; align-items:center; gap:18px; background:#071b2e; color:#fffdf8; font:600 13px/1.5 "Barlow Condensed",sans-serif; }
+.login { display:flex; align-items:center; gap:9px; flex-shrink:0; color:#fffdf8; font-size:14px; letter-spacing:.12em; text-transform:uppercase; margin-left:auto; }
+.login:focus-visible { outline:2px solid #f4f0e7; outline-offset:3px; }
+.badge { flex-shrink:0; padding:1px 8px; border-radius:2px; background:#d42930; color:white; font-size:11px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
+.established { flex-shrink:0; color:#fffdf8; font-size:11px; letter-spacing:.14em; text-transform:uppercase; padding-right:18px; border-right:1px solid #ffffff35; }
+.message { flex:1; min-width:0; overflow-wrap:anywhere; letter-spacing:.06em; }
+.action { flex-shrink:0; display:flex; gap:10px; align-items:center; font-size:12px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; }
+.action:hover { text-decoration:underline; text-underline-offset:3px; }
+.action:focus-visible { outline:2px solid #f4f0e7; outline-offset:3px; }
+@media(max-width:600px) { .bar { padding:7px 16px; gap:6px 12px; flex-wrap:wrap; } .message { flex-basis:60%; } .action { margin-left:auto; max-width:100%; overflow-wrap:anywhere; } .established { padding-right:12px; } }

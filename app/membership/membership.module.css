@@ -1,0 +1,34 @@
+.page { background:#f4f0e7; color:#071b2e; min-height:65vh; }
+.hero { position:relative; overflow:hidden; background:#071b2e; color:#fffdf8; padding:42px 5vw; }
+.heroCopy { position:relative; z-index:1; max-width:900px; }
+.eyebrow { font:700 14px/1.4 "Barlow Condensed",sans-serif; letter-spacing:.2em; text-transform:uppercase; color:#d42930; }
+.hero h1 { font:700 clamp(38px,6vw,78px)/1.08 Georgia,serif; margin:10px 0 12px; overflow-wrap:anywhere; }
+.hero p { font:400 clamp(19px,2vw,25px)/1.5 Georgia,serif; margin:0; }
+.watermark { position:absolute; right:7%; top:-20px; width:230px; height:280px; object-fit:contain; opacity:.1; transform:rotate(-8deg); pointer-events:none; }
+.content { max-width:1440px; margin:auto; padding:48px 5vw 64px; }
+.sectionHeading { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+.sectionHeading h2 { font:700 clamp(28px,3vw,40px)/1.2 Georgia,serif; margin:8px 0 0; }
+.season { font:700 16px/1.3 "Barlow Condensed",sans-serif; text-transform:uppercase; border:1px solid #071b2e30; padding:12px 18px; }
+.notice { font:400 16px/1.7 "Barlow",sans-serif; color:#526174; border-left:3px solid #d42930; padding:10px 20px; margin:28px 0; }
+.grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+.card { background:#fffdf9; border:1px solid #071b2e20; border-top:3px solid #071b2e; padding:26px; display:flex; flex-direction:column; min-width:0; }
+.cardTop { display:flex; justify-content:space-between; align-items:center; gap:12px; font:700 13px/1.3 "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.12em; color:#d42930; }
+.number { font:400 32px/1 Georgia,serif; color:#071b2e40; }
+.card h3 { font:700 29px/1.15 "Barlow Condensed",sans-serif; text-transform:uppercase; margin:20px 0 12px; }
+.card p { font:400 16px/1.6 "Barlow",sans-serif; color:#526174; margin:0 0 24px; }
+.card dl { margin:auto 0 24px; padding-top:12px; }
+.card dt { font:600 12px/1.5 "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.1em; color:#526174; }
+.card dd { font:600 16px/1.5 "Barlow",sans-serif; margin:5px 0 0; }
+.card details { border-top:1px solid #071b2e20; padding-top:16px; }
+.card summary { cursor:pointer; font:700 17px/1.4 "Barlow Condensed",sans-serif; text-transform:uppercase; }
+.card summary span { float:right; color:#d42930; }
+.card details p { margin:16px 0 0; font-size:14px; }
+.source { font:400 13px/1.6 "Barlow",sans-serif; color:#526174; margin-top:24px; }
+.source a { text-decoration:underline; text-underline-offset:3px; }
+.placeholder { padding:64px 0; max-width:650px; }
+.placeholder h2 { font:700 clamp(36px,5vw,58px)/1.15 Georgia,serif; margin:16px 0; }
+.placeholder p { font:400 18px/1.7 "Barlow",sans-serif; color:#526174; }
+.back { display:inline-block; margin-top:20px; font:700 18px "Barlow Condensed",sans-serif; text-transform:uppercase; color:#d42930; }
+.page a:focus-visible,.page summary:focus-visible { outline:3px solid #bd8c25; outline-offset:4px; }
+@media(max-width:1000px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .grid { grid-template-columns:1fr; } .hero { padding:32px 20px; } .content { padding:32px 20px; } .card { padding:22px; } }

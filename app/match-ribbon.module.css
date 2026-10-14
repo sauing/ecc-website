@@ -1,0 +1,83 @@
+.ribbon {
+  --ink: #0b2038;
+  --paper: #f8f5ed;
+  --accent: #df1729;
+  display: grid;
+  grid-template-columns: 25% 13% 9% minmax(0, 1fr) 16%;
+  align-items: center;
+  min-height: 154px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid #0b20382b;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Barlow Condensed", Arial, sans-serif;
+  text-transform: uppercase;
+}
+.identity {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 40px 20px 24px;
+  background: var(--ink);
+  color: white;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%);
+}
+.identity::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 54px;
+  background: var(--accent);
+  clip-path: polygon(74% 0, 100% 0, 26% 100%, 0 100%);
+}
+.identity img { width: 78px; height: 104px; object-fit: contain; flex-shrink: 0; }
+.identity span { border-left: 1px solid #ffffff70; padding-left: 16px; font-size: clamp(16px, 1.65vw, 26px); font-weight: 700; line-height: 1.12; letter-spacing: .05em; }
+.matchday { padding: 0 14px; line-height: 1; }
+.matchday span { display: block; font-size: clamp(22px, 2.1vw, 34px); font-weight: 600; }
+.matchday strong { display: block; font-size: clamp(24px, 2.4vw, 38px); font-weight: 800; }
+.count { border-inline: 1px solid #0b203865; text-align: center; padding: 0 10px; line-height: 1; }
+.count strong { display: block; color: var(--accent); font-size: 64px; font-weight: 800; }
+.count span { font-size: 20px; font-weight: 700; }
+.match { min-width: 0; padding: 18px 20px; display: grid; gap: 10px; }
+.switcher { display: flex; flex-wrap: wrap; gap: 14px; }
+.switcher button { min-width: 78px; padding: 4px 16px; border: 2px solid var(--ink); border-radius: 5px; background: transparent; color: var(--ink); font: 700 18px/1.1 "Barlow Condensed", sans-serif; cursor: pointer; }
+.switcher button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: white; }
+.teams { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; font-size: clamp(24px, 2.45vw, 40px); font-weight: 800; line-height: 1.05; }
+.teams span { overflow-wrap: anywhere; }
+.teams b { color: var(--accent); font-size: .8em; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: 14px; font-weight: 600; letter-spacing: .07em; line-height: 1.2; }
+.meta span + span { border-left: 1px solid var(--ink); padding-left: 12px; }
+.action { align-self: stretch; display: flex; align-items: center; background: var(--ink); padding-block: 25px; clip-path: polygon(32px 0, 100% 0, 100% 100%, 0 100%); }
+.action a { width: 100%; min-height: 76px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 12px 16px 30px; background: var(--accent); color: white; font-size: clamp(16px, 1.5vw, 24px); font-weight: 700; }
+.action a span { font-size: 28px; }
+.switcher button:focus-visible, .action a:focus-visible { outline: 3px solid #d6aa2c; outline-offset: -3px; }
+@media (max-width: 1100px) {
+  .ribbon { grid-template-columns: 24% 14% 9% minmax(0, 1fr) 15%; }
+  .identity { gap: 8px; padding-left: 12px; padding-right: 30px; }
+  .identity img { width: 54px; height: 80px; }
+  .identity span { padding-left: 8px; font-size: 16px; }
+  .matchday { padding-inline: 8px; }
+  .matchday strong { font-size: 24px; }
+  .count strong { font-size: 52px; }
+  .count span { font-size: 16px; }
+  .match { padding-inline: 12px; }
+  .teams { font-size: 26px; }
+  .meta { font-size: 12px; }
+}
+@media (max-width: 760px) {
+  .ribbon { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 76px; }
+  .identity { padding: 14px; clip-path: none; }
+  .identity::after { display: none; }
+  .identity span { font-size: 14px; }
+  .identity img { width: 40px; height: 58px; }
+  .matchday { padding: 14px; }
+  .matchday span, .matchday strong { font-size: 23px; }
+  .count { border-right: 0; }
+  .match { grid-column: 1 / -1; padding: 20px; }
+  .teams { font-size: 32px; }
+  .action { grid-column: 1 / -1; padding: 0; clip-path: none; }
+  .action a { min-height: 52px; padding: 12px; font-size: 20px; }
+}

@@ -1,0 +1,39 @@
+.page { background:#f4f0e7; color:#071b2e; }
+.hero { position:relative; overflow:hidden; padding:30px 5vw 26px; background:#071b2e; color:#fffdf8; }
+.heroCopy { position:relative; z-index:1; }
+.eyebrow { font:700 13px/1.4 "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.22em; color:#d42930; }
+.hero h1 { font:700 clamp(42px,6vw,80px)/1.05 Georgia,serif; margin:4px 0 16px; }
+.goldRule { width:58px; height:3px; background:#c2a65f; }
+.watermark { position:absolute; width:225px; height:260px; object-fit:contain; right:8%; top:-40px; opacity:.14; transform:rotate(-8deg); }
+.content { max-width:1440px; margin:auto; padding:36px 5vw; }
+.contactLayout { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:40px; }
+.details { padding-right:32px; border-right:1px solid #071b2e20; min-width:0; }
+.details h2 { font:700 clamp(30px,3.5vw,48px)/1.15 Georgia,serif; margin:0 0 12px; }
+.intro { font:400 16px/1.6 "Barlow",sans-serif; margin:0 0 12px; color:#415165; }
+.contactRow { display:flex; gap:22px; padding:20px 0; border-bottom:1px solid #071b2e20; font:400 16px/1.5 "Barlow",sans-serif; }
+.contactRow svg { width:29px; height:32px; flex-shrink:0; fill:none; stroke:#d42930; stroke-width:1.6; }
+.contactRow h3 { font:700 15px/1.3 "Barlow Condensed",sans-serif; letter-spacing:.12em; text-transform:uppercase; margin:0 0 5px; }
+.contactRow address { font-style:normal; }
+.contactRow a,.card a { overflow-wrap:anywhere; }
+.map { width:100%; height:180px; border:1px solid #071b2e20; margin-top:24px; display:block; }
+.directions { display:inline-block; border:1px solid #d42930; color:#d42930; padding:13px 24px; margin-top:16px; font:700 15px/1.3 "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.13em; }
+.form { border-top:3px solid #071b2e; padding-top:18px; min-width:0; }
+.form h2 { font:700 clamp(25px,2.8vw,36px)/1.2 Georgia,serif; text-transform:uppercase; margin:8px 0 24px; }
+.form label { display:block; font:500 15px/1.4 "Barlow",sans-serif; margin:16px 0 7px; }
+.form label span { color:#d42930; }
+.form input,.form select,.form textarea { display:block; box-sizing:border-box; width:100%; max-width:100%; border:1px solid #071b2e50; border-radius:0; background:#fffdf980; color:#071b2e; padding:11px 14px; font:400 16px/1.4 "Barlow",sans-serif; }
+.form textarea { resize:vertical; min-height:120px; }
+.form button { display:inline-flex; align-items:center; gap:24px; border:0; border-radius:0; background:#d42930; color:white; padding:14px 26px; margin-top:22px; cursor:pointer; font:700 17px/1.3 "Barlow Condensed",sans-serif; letter-spacing:.12em; text-transform:uppercase; }
+.form button:hover { background:#b91d28; }
+.formNote { font:400 13px/1.5 "Barlow",sans-serif; color:#526174; margin:12px 0 0; }
+.formNote a { text-decoration:underline; }
+.sectionHeading { border-top:1px solid #071b2e30; padding-top:28px; margin-bottom:24px; }
+.sectionHeading h2 { font:700 36px/1.2 Georgia,serif; margin:8px 0; }
+.grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; padding-bottom:32px; }
+.card { border-top:2px solid #071b2e; padding:20px 0; min-width:0; }
+.role { font:700 14px/1.4 "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.09em; color:#d42930; }
+.card h3 { font:700 26px/1.2 "Barlow Condensed",sans-serif; margin:10px 0; }
+.card a { font:400 15px/1.5 "Barlow",sans-serif; text-decoration:underline; text-underline-offset:4px; }
+.page :is(a,button,input,select,textarea):focus-visible { outline:3px solid #bd8c25; outline-offset:3px; }
+@media(max-width:900px) { .contactLayout { gap:26px; } .details { padding-right:24px; } .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:680px) { .contactLayout,.grid { grid-template-columns:1fr; } .details { border-right:0; padding-right:0; } .hero { padding:28px 20px; } .content { padding:28px 20px; } .form { margin-top:12px; } }
