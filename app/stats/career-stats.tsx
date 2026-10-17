@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import TeamHeader from "../teams/team-header";
 import s from "./career-stats.module.css";
 
@@ -32,13 +33,13 @@ export default function CareerStats({odi,t20}:{odi:Row[];t20:Row[]}) {
       <section className={s.leaders} aria-label="Career leaders">
         {([["runs","Most career runs","Runs"],["wickets","Most career wickets","Wickets"],["catches","Most career catches","Catches"]] as const).map(([key,title,unit],i)=>{
           const leader = rows.reduce<Row|undefined>((best,r)=>!best || Number(r[key])>Number(best[key]) ? r : best,undefined);
-          return <article key={key} className={s.card}>
-            <div className={s.art} style={{backgroundPosition:`${i*50}% center`}} />
+          return <article key={key} className={s.card} data-category={key}>
+            <div className={s.photo}><Image src={`/images/stats/ecc-${["batting","bowling","catching"][i]}.jpg`} alt={`ECC ${["batting","bowling","catching"][i]} action — category photo, not a record-holder portrait`} fill sizes="(max-width: 800px) 90vw, 30vw" /></div>
             <div className={s.cardText}><h2>{title}</h2><strong>{leader ? Number(leader[key]).toLocaleString("en-GB") : "—"}</strong><span>{unit}</span><p>{leader ? name(leader.player) : "No records"}</p></div>
           </article>;
         })}
       </section>
-      <p className={s.coverage}>Available records: 2026 · Career totals will grow as earlier and future seasons are added.</p>
+      <p className={s.coverage}>Available records: 2026 · Career totals will grow as earlier and future seasons are added. Photos show ECC match action, not necessarily the named record holders.</p>
       <div className={s.toolbar}><div role="group" aria-label="Statistic type">{(Object.keys(columns) as (keyof typeof columns)[]).map(t=><button key={t} aria-pressed={tab===t} onClick={()=>{setTab(t);setSort(t==="batting"?"runs":t==="bowling"?"wickets":"catches");setDesc(true);}}>{t}</button>)}</div><label><span aria-hidden="true">⌕</span><input aria-label="Search player" placeholder="Search player…" value={query} onChange={e=>setQuery(e.target.value)}/></label></div>
       <div className={s.tableWrap}><table><thead><tr><th>#</th>{columns[tab].map(([key,label])=><th key={key} aria-sort={sort===key ? desc?"descending":"ascending":"none"} className={sort===key?s.sorted:""}><button onClick={()=>{setSort(key);setDesc(sort===key?!desc:key!=="player");}}>{label}{sort===key && <span> {desc?"▾":"▴"}</span>}</button></th>)}</tr></thead>
         <tbody>{visible.map((r,i)=><tr key={r.player}><td>{i+1}</td>{columns[tab].map(([key])=><td key={key} className={sort===key?s.sorted:""}>{key==="player"?name(r.player):r[key]}</td>)}</tr>)}{!visible.length && <tr><td colSpan={columns[tab].length+1}>No players found.</td></tr>}</tbody></table></div>

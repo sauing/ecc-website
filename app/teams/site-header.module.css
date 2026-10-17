@@ -21,6 +21,16 @@
 .menu summary span { font-size:14px; margin-left:7px; }
 .dropdown { position:absolute; top:100%; left:50%; transform:translateX(-50%); display:grid; grid-template-columns:1fr 1fr; min-width:240px; padding:10px; background:#f4f0e7; border:1px solid #071b2e25; border-top:3px solid #d42930; box-shadow:0 12px 24px #071b2e20; }
 .dropdown a { padding:12px; font-size:20px; }
+.nav[data-compact="true"] { padding-inline:3vw; gap:clamp(8px,1.5vw,22px); }
+.nav .compactBrand { display:flex; align-items:center; justify-content:center; flex:0 0 38px; padding:0; border:0; }
+.compactBrand img { display:block; width:32px; height:42px; object-fit:contain; }
+.nav .compactJoin { display:flex; align-items:center; gap:9px; flex-shrink:0; background:#d42930; color:white; padding:9px 17px; border:0; font-size:17px; clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%); }
+.nav .compactJoin:hover { color:white; background:#b91d28; }
+@media(min-width:801px) and (max-width:1150px) {
+ .nav[data-compact="true"] { padding-inline:16px; gap:8px; }
+ .nav[data-compact="true"] > a:not(.compactBrand):not(.compactJoin),.nav[data-compact="true"] summary { font-size:18px; padding-inline:4px; }
+ .nav[data-compact="true"] .compactJoin { font-size:15px; padding-inline:12px; }
+}
 .mobile { display:none; }
 .header a:focus-visible,.header summary:focus-visible { outline:3px solid #bd8c25; outline-offset:3px; }
 @media(max-width:1000px) {
