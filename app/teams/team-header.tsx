@@ -5,7 +5,7 @@ import s from "./site-header.module.css";
 import NoticeBar from "../notice-bar";
 
 const teams = ["ecc1","ecc2","ecc3","ecc4","youth-1","youth-2"];
-const links = [["/about","Club"],["/stats","Stats"],["/youth","Youth"],["/membership","Membership"],["/contact","Contacts"],["/social","Social"]];
+const links = [["/about","Club"],["/stats","Stats"],["/tournaments","Tournaments"],["/youth","Youth"],["/membership","Membership"],["/contact","Contacts"],["/social","Social"]];
 export default function TeamHeader() {
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
@@ -32,7 +32,7 @@ export default function TeamHeader() {
       window.removeEventListener("resize", measure);
     };
   }, []);
-  const link = ([href,label]: string[]) => <a key={href} href={href} aria-current={pathname===href ? "page" : undefined}>{label}</a>;
+  const link = ([href,label]: string[]) => <a key={href} href={href} aria-current={pathname===href || pathname.startsWith(`${href}/`) ? "page" : undefined}>{label}</a>;
   const teamLinks = teams.map(t=><a key={t} href={`/teams/${t}`} aria-current={pathname===`/teams/${t}` ? "page" : undefined}>{t.replace("-"," ").toUpperCase()}</a>);
   return <header className={s.header} ref={headerRef}>
     <div ref={mastheadRef}>

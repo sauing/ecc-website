@@ -10,8 +10,8 @@
 .join { background:#d42930; color:white; padding:18px 32px; font:700 24px/1.2 "Barlow Condensed",sans-serif; text-transform:uppercase; white-space:nowrap; display:flex; align-items:center; gap:22px; flex-shrink:0; clip-path:polygon(15px 0,100% 0,calc(100% - 15px) 100%,0 100%); }
 .join span { font-size:29px; line-height:1; }
 .join:hover { background:#b91d28; }
-.nav { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:0 6vw; border-top:1px solid #071b2e25; }
-.nav a,.nav summary { font:700 24px/1.2 "Barlow Condensed",sans-serif; letter-spacing:.035em; text-transform:uppercase; white-space:nowrap; color:#071b2e; }
+.nav { display:flex; justify-content:space-between; align-items:center; gap:clamp(6px,1.2vw,20px); padding:0 4vw; border-top:1px solid #071b2e25; }
+.nav a,.nav summary { font:700 clamp(18px,1.75vw,24px)/1.2 "Barlow Condensed",sans-serif; letter-spacing:.035em; text-transform:uppercase; white-space:nowrap; color:#071b2e; }
 .nav > a,.nav summary { padding:11px 10px 9px; border-bottom:3px solid transparent; }
 .nav a[aria-current="page"],.nav summary[data-active="true"] { color:#d42930; border-bottom-color:#d42930; }
 .nav a:hover,.nav summary:hover { color:#d42930; }
@@ -40,8 +40,9 @@
  .wordmark { padding-left:18px; }
  .wordmark small { font-size:11px; letter-spacing:.14em; }
  .join { font-size:21px; padding:16px 26px; }
- .nav { padding-inline:24px; gap:12px; }
- .nav a,.nav summary { font-size:21px; }
+ .nav { padding-inline:16px; gap:5px; }
+ .nav a,.nav summary { font-size:18px; }
+ .nav > a,.nav summary { padding-inline:5px; }
 }
 @media(max-width:800px) {
  .header { position:relative; top:auto; }

@@ -28,7 +28,8 @@ export default function AdminLogin() {
         <small>No authentication or admin access is granted. This opens a preview only; no real member records are available.</small>
         <a className={s.publicLink} href="/">Just visiting? Explore ECC →</a>
       </> : <>
-        <p>This is a public demo preview, not an authenticated admin session. The management tools below are planned and are not functional yet.</p>
+        <p>This is a public demo preview, not an authenticated admin session. Tournament management is available as an interactive demo; the other tools below are planned.</p>
+        <a className={s.memberDemo} href="/tournaments/admin">Open tournament admin demo →</a>
         <div className={s.tools}>{plannedTools.map(([name, description]) => <article key={name}><span>Planned</span><h2>{name}</h2><p>{description}</p></article>)}</div>
         <p className={s.note}>Public team squads stay visible without login. Personal contact details, payment records and editing permissions will remain admin-only.</p>
         <button className={s.primary} onClick={() => setDemo(false)}>Exit demo preview</button>
