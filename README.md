@@ -17,7 +17,7 @@ Open http://localhost:3000. `pnpm typecheck` checks TypeScript; `pnpm build` pro
 
 - Club homepage, match ribbon, photo galleries and club information.
 - Club statistics and season-specific team pages.
-- Membership catalogue, youth placeholder, contacts and social pages.
+- Membership catalogue, photo-led youth cricket page, contacts and social pages.
 - `/join`: in-memory demonstration of registration, payment outcomes and a secretary email preview.
 - `/login`: member and admin demo entry points.
 - `/my-ecc`: fictional member dashboard with membership, team, stats, matches and an external availability-app link.
