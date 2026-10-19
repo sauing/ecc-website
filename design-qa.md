@@ -1,4 +1,52 @@
-# Youth page visual QA
+# Website visual QA
+
+final result: passed
+
+## Partners page: selected concept 3
+
+### Visual truth and comparison evidence
+
+- Source: `C:/Users/saurabh.singh2/.codex/generated_images/01a1537a-fc8b-79a2-ac5f-1520620ae9f2/exec-7e0b7c36-e487-4722-ad94-ccbe9d7644ae.png` (1039 × 1514 pixels), the third displayed Partners concept.
+- Implementation: `http://127.0.0.1:3000/partners`, production build, empty form with Youth & development selected.
+- Desktop viewport: 1440 × 1000 CSS pixels. Browser captures are 1425 × 990 pixels and normalized to 1440 × 1000 for comparison, as with the earlier Youth review. Density/viewport scaling is accounted for only in comparison artifacts.
+- `.tmp/partners-qa/partners-desktop.png` (1440 × 2357) combines overlapping captures at scroll positions 0, 900 and 1356.8. Repeated sticky-navigation pixels are excluded from the later frames. Original captures: `desktop-top.png`, `desktop-middle.png`, `desktop-bottom.png`.
+- Full source/implementation comparison opened together: `.tmp/partners-qa/comparison-final.jpg`.
+- Focused comparisons opened together: `.tmp/partners-qa/hero-comparison-final.jpg` and `enquiry-comparison-final.jpg`. The latter makes labels, field spacing, interest selection and enquiry copy readable independently of the full-page comparison.
+- Responsive evidence: `.tmp/partners-qa/mobile-hero.png`, `mobile-enquiry.png`, and `tablet-fixed.png`. Phone inspected at 390 × 844, narrow phone bounds checked at 320 × 740, compact navigation inspected at 850 × 1000.
+
+### Findings and fixes
+
+- [P2, resolved] Initial desktop panoramic crop clipped faces. Changed the desktop photo position from 56% to 40%; final hero comparison shows the entire group's heads.
+- [P2, resolved] Adding Partners to the compact navigation caused horizontal overflow at 850 pixels (scroll width 880). Reduced compact navigation type and gaps only within its tablet media query. Rechecked: viewport 850, scroll width 835, Join ECC within the visible navigation.
+- [P2, resolved] Initial heading proportions were smaller than the selected concept. Increased desktop hero, partner, enquiry and closing heading scales and adjusted hero padding. Rebuilt, recaptured, and reviewed final full-page and focused comparisons. Mobile-specific scales remain unchanged.
+
+No actionable P0/P1/P2 findings remain.
+
+### Required fidelity surfaces
+
+- **Fonts:** Barlow Condensed display and Barlow body retain the existing club identity. Three-line hero and single-line desktop enquiry heading follow the selected visual hierarchy. Phone headings reflow without overflow.
+- **Spacing:** Navy hero, panoramic community photograph, equally spaced three-part sponsor showcase, open enquiry area and red closing band follow the selected structure. Existing shared masthead, crest, announcement/login behavior and full club navigation are retained deliberately; these add height compared with the simplified concept header.
+- **Colors:** Existing navy, cream, red and off-white tokens reused, with clear hover/focus and selected-radio states.
+- **Images:** Original community photograph and all three existing sponsor logos used directly. No placeholder imagery, invented partners or altered sponsor branding. Logo containers have equal space; intrinsic aspect ratios remain intact. Actual source logo backgrounds are retained rather than reproducing generated image cleanup.
+- **Copy:** Selected headline and core content retained. The mock's unsupported growth claim is omitted. Prospective partnerships are described as possibilities to discuss. Email drafting is explicitly explained; no implied successful transmission.
+
+### Functional checks
+
+- Homepage Our partners heading links to `/partners`; its Become a partner link reaches `/partners#partnership-enquiry`.
+- Shared desktop/mobile navigation includes Partners with the active state. Mobile menu opens and Partners navigates successfully.
+- Interest choices update descriptions and support native radio keyboard arrows.
+- Valid test company, email and message produce a mailto draft with the correct destination, selected interest, encoded subject and body. Editing any field or changing interest removes the stale draft.
+- Required company validation prevents draft creation when blank. Inputs use email validation and length limits.
+- No message sent and no external email app launched during testing.
+- No horizontal overflow at the tested phone/tablet widths; all page images loaded in the production browser review.
+- Production browser warning/error logs: none. Development emitted lazy-image LCP advice when reloading at a sponsor anchor; the hero is preloaded and sponsor images remain lazy to avoid unnecessary loading on normal entry.
+- `npm run typecheck` and final `npm run build` passed; `/partners` statically generated successfully. Existing routes still build.
+- Temporary viewport overrides reset, local preview retained. This page has not been committed or deployed as part of this implementation turn.
+
+### Follow-up polish
+
+- [P3] The supplied FinancieelNext logo is a small raster image. A future original vector asset would improve sharpness at large sizes.
+- [P3] Small decorative button arrows and the mock's selection notch are omitted; native controls, labels and focus states carry the interactions.
 
 final result: passed
 

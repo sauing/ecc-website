@@ -5,7 +5,7 @@ import s from "./site-header.module.css";
 import NoticeBar from "../notice-bar";
 
 const teams = ["ecc1","ecc2","ecc3","ecc4","youth-1","youth-2"];
-const links = [["/about","Club"],["/stats","Stats"],["/tournaments","Tournaments"],["/youth","Youth"],["/membership","Membership"],["/contact","Contacts"],["/social","Social"]];
+const links = [["/about","Club"],["/stats","Stats"],["/tournaments","Tournaments"],["/youth","Youth"],["/partners","Partners"],["/membership","Membership"],["/contact","Contacts"],["/social","Social"]];
 export default function TeamHeader() {
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);

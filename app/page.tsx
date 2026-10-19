@@ -3,6 +3,7 @@ import { getClubFixtures, selectFeaturedMatchday } from "./fixtures";
 import { MatchRibbon } from "./match-ribbon";
 import { HomeSections } from "./home-sections";
 import { HeroSlideshow } from "./hero-slideshow";
+import { partners } from "./partners/partners";
 
 export default async function Home() {
   const matchday = selectFeaturedMatchday(await getClubFixtures());
@@ -55,20 +56,12 @@ export default async function Home() {
       <section className="sponsors" aria-labelledby="sponsors-title">
         <div className="sponsors-heading">
           <span>Backing cricket in Eindhoven</span>
-          <h2 id="sponsors-title">Our partners</h2>
+          <h2 id="sponsors-title"><a href="/partners">Our partners</a></h2>
         </div>
         <div className="sponsor-list">
-          <a href="https://financieelnext.nl/" target="_blank" rel="noreferrer" aria-label="Visit FinancieelNext">
-            <img src="/images/sponsors/financieelnext.png" alt="FinancieelNext" />
-          </a>
-          <a href="https://gardengate.nl/" target="_blank" rel="noreferrer" aria-label="Visit GardenGate">
-            <img src="/images/sponsors/gardengate.png" alt="GardenGate" />
-          </a>
-          <a href="https://the-indian-pantry.dinemetrics.app/restaurant/63" target="_blank" rel="noreferrer" aria-label="Visit Indian Pantry">
-            <img src="/images/sponsors/indian-pantry.jpg" alt="Indian Pantry" />
-          </a>
+          {partners.map(partner => <a key={partner.name} href={partner.website} target="_blank" rel="noreferrer" aria-label={`Visit ${partner.name}`}><img src={partner.logo} alt={partner.name} /></a>)}
         </div>
-        <a className="sponsor-cta" href="#sponsor">Become a partner <span>→</span></a>
+        <a className="sponsor-cta" href="/partners#partnership-enquiry">Become a partner <span>→</span></a>
       </section>
     </main>
   );

@@ -58,6 +58,7 @@ Status values: `Planned` · `In progress` · `Developed` · `Blocked`
 - [ ] `Planned` — Gallery
 - [ ] `Planned` — Club videos
 - [ ] `Developed` — Sponsor logos and partner links on homepage
+- [ ] `Developed` — Dedicated Partners page, shared partner catalogue and interest-based email draft enquiries
 - [ ] `Planned` — Sponsor management in admin dashboard
 - [ ] `Planned` — Management and board pages
 - [ ] `Planned` — Documents and policies

@@ -27,8 +27,8 @@
 .nav .compactJoin { display:flex; align-items:center; gap:9px; flex-shrink:0; background:#d42930; color:white; padding:9px 17px; border:0; font-size:17px; clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%); }
 .nav .compactJoin:hover { color:white; background:#b91d28; }
 @media(min-width:801px) and (max-width:1150px) {
- .nav[data-compact="true"] { padding-inline:16px; gap:8px; }
- .nav[data-compact="true"] > a:not(.compactBrand):not(.compactJoin),.nav[data-compact="true"] summary { font-size:18px; padding-inline:4px; }
+ .nav[data-compact="true"] { padding-inline:16px; gap:6px; }
+ .nav[data-compact="true"] > a:not(.compactBrand):not(.compactJoin),.nav[data-compact="true"] summary { font-size:clamp(14px,1.8vw,18px); padding-inline:4px; }
  .nav[data-compact="true"] .compactJoin { font-size:15px; padding-inline:12px; }
 }
 .mobile { display:none; }

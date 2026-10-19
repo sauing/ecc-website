@@ -1,0 +1,114 @@
+.page { background:var(--cream); color:var(--navy); }
+.page h1,.page h2,.page h3 { font-family:"Barlow Condensed",Arial,sans-serif; text-transform:uppercase; }
+.page h1,.page h2 { font-weight:900; letter-spacing:-.025em; }
+.page em { color:var(--red); font-style:normal; }
+.eyebrow { margin:0 0 20px; font:700 12px/1.4 "Barlow",Arial,sans-serif; letter-spacing:.18em; text-transform:uppercase; color:var(--red); }
+.hero { background:var(--navy); color:var(--white); }
+.heroInner { max-width:1600px; margin:auto; padding:32px 5vw 24px; display:grid; grid-template-columns:1.8fr 1fr; gap:65px; align-items:center; }
+.hero .eyebrow { color:var(--cream); letter-spacing:.24em; }
+.hero h1 { margin:0; font-size:clamp(60px,8.8vw,140px); line-height:.97; }
+.heroCopy > p { margin:0 0 28px; max-width:410px; font-size:22px; line-height:1.5; }
+.cta { display:inline-flex; justify-content:center; align-items:center; min-height:52px; padding:15px 25px; border:0; background:var(--red); color:#fff; cursor:pointer; font:700 19px/1.25 "Barlow Condensed",Arial,sans-serif; text-transform:uppercase; letter-spacing:.075em; transition:background .2s; }
+.cta:hover { background:#b91d28; }
+.heroLink { display:table; margin-top:20px; padding-bottom:5px; border-bottom:1px solid #fff9; font:700 17px/1.3 "Barlow Condensed",Arial,sans-serif; text-transform:uppercase; letter-spacing:.055em; }
+.heroLink:hover { color:#ffb5b7; }
+.communityPhoto { position:relative; height:clamp(190px,17vw,270px); overflow:hidden; }
+.communityPhoto img { object-fit:cover; object-position:50% 40%; }
+.partners { max-width:1600px; margin:auto; padding:44px 5vw; scroll-margin-top:85px; }
+.partnersHeading { display:grid; grid-template-columns:1.3fr 1fr; gap:60px; align-items:center; margin-bottom:34px; }
+.partnersHeading h2 { margin:0; font-size:clamp(48px,6.4vw,94px); line-height:1; }
+.partnersHeading .eyebrow { margin-bottom:13px; }
+.partnersHeading > p { margin:0; max-width:470px; font-size:17px; line-height:1.6; }
+.partnerGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+.partner { text-align:center; padding:0 35px 12px; }
+.partner + .partner { border-left:1px solid #071b2e20; }
+.logoLink { display:block; position:relative; height:172px; max-width:310px; margin:0 auto 18px; }
+.logoLink img { object-fit:contain; }
+.partner h3 { margin:0 0 20px; font-size:28px; font-weight:800; }
+.websiteLink { display:inline-block; color:var(--red); border-bottom:1px solid var(--red); padding-bottom:7px; font:700 16px/1.2 "Barlow Condensed",Arial,sans-serif; letter-spacing:.09em; text-transform:uppercase; }
+.websiteLink:hover { color:var(--navy); border-color:var(--navy); }
+.enquiry { max-width:1600px; margin:auto; padding:46px 5vw 55px; border-top:1px solid #071b2e15; scroll-margin-top:85px; }
+.enquiryHeading { max-width:62%; }
+.enquiryHeading .eyebrow { margin-bottom:14px; }
+.enquiryHeading h2 { margin:0 0 35px; font-size:clamp(44px,6vw,88px); line-height:1; }
+.enquiryForm { display:grid; grid-template-columns:1.65fr 1fr; gap:65px; }
+.interests { min-width:0; }
+.choices { border:0; margin:0 0 28px; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+.choice { cursor:pointer; min-width:0; position:relative; }
+.choice input { position:absolute; width:1px; height:1px; opacity:0; }
+.choice span { display:flex; min-height:70px; height:100%; padding:14px 12px; align-items:center; justify-content:center; text-align:center; background:#fffdf850; border:1px solid #071b2e24; font-size:15px; font-weight:600; line-height:1.4; }
+.choice + .choice span { border-left:0; }
+.choice input:checked + span { background:var(--navy); color:var(--white); border-color:var(--navy); }
+.choice input:focus-visible + span { outline:3px solid #bd8c25; outline-offset:3px; position:relative; z-index:1; }
+.opportunityDescription { margin:0 0 22px; max-width:650px; font-size:23px; line-height:1.5; min-height:105px; }
+.approach { margin:0; font-size:18px; line-height:1.5; }
+.formFields { display:flex; flex-direction:column; margin-top:-121px; min-width:0; }
+.formFields > label { margin:0 0 9px; font:700 12px/1.4 "Barlow Condensed",Arial,sans-serif; text-transform:uppercase; letter-spacing:.08em; }
+.formFields > label span { color:var(--red); }
+.formFields > input,.formFields > textarea { display:block; width:100%; border:1px solid #071b2e35; border-radius:0; padding:12px 14px; margin:0 0 20px; color:var(--navy); background:var(--white); font:400 16px/1.45 "Barlow",Arial,sans-serif; }
+.formFields > textarea { resize:vertical; min-height:115px; }
+.formFields > input::placeholder,.formFields > textarea::placeholder { color:#66717c; }
+.formNote { margin:11px 0 0; color:#526174; font-size:13px; line-height:1.5; }
+.directContact { margin:16px 0 0; font-size:14px; line-height:1.6; }
+.directContact a { color:#ba2028; text-decoration:underline; text-underline-offset:3px; }
+.draft { margin-top:18px; padding:18px; border-left:3px solid var(--red); background:var(--white); font-size:15px; line-height:1.5; }
+.draft p { margin:8px 0 12px; }
+.draft a { color:#ba2028; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+.closing { display:grid; grid-template-columns:1.6fr 1fr; gap:65px; align-items:center; background:var(--red); color:var(--white); padding:35px max(5vw,calc((100vw - 1440px)/2)); }
+.closing h2 { margin:0; font-size:clamp(38px,5vw,74px); line-height:1; }
+.closing p { margin:0; max-width:430px; font-size:17px; line-height:1.6; }
+.footer { background:var(--cream); padding:27px 5vw; display:flex; align-items:center; justify-content:space-between; gap:25px; }
+.footerBrand { font:800 25px/1.1 "Barlow Condensed",Arial,sans-serif; text-transform:uppercase; }
+.footerBrand small { display:block; margin-top:8px; font:600 10px/1.3 "Barlow",Arial,sans-serif; letter-spacing:.2em; color:#526174; }
+.footer nav { display:flex; gap:28px; font:700 17px/1.2 "Barlow Condensed",Arial,sans-serif; text-transform:uppercase; }
+.footer nav a:hover,.footer nav a[aria-current="page"] { color:var(--red); }
+.page a:focus-visible,.page button:focus-visible,.page input:focus-visible,.page textarea:focus-visible,.footer a:focus-visible { outline:3px solid #bd8c25; outline-offset:4px; }
+.srOnly { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+@media(max-width:1100px) {
+ .heroInner,.enquiryForm { gap:35px; }
+ .hero h1 { font-size:6.6vw; }
+ .heroCopy > p { font-size:17px; }
+ .partnersHeading { gap:35px; }
+ .partner { padding-inline:20px; }
+ .logoLink { height:145px; }
+ .choice span { font-size:14px; padding-inline:8px; }
+ .enquiryHeading { max-width:60%; }
+ .formFields { margin-top:-103px; }
+ .opportunityDescription { font-size:21px; }
+}
+@media(max-width:760px) {
+ .heroInner { grid-template-columns:1fr; gap:30px; padding:36px 6vw 36px; }
+ .hero h1 { font-size:clamp(42px,8.9vw,68px); }
+ .hero .eyebrow { font-size:10px; margin-bottom:20px; }
+ .heroCopy > p { max-width:600px; font-size:17px; margin-bottom:23px; }
+ .communityPhoto { height:170px; }
+ .communityPhoto img { object-position:50% 55%; }
+ .partners { padding:36px 6vw; }
+ .partnersHeading { grid-template-columns:1fr; gap:20px; margin-bottom:28px; }
+ .partnersHeading > p { font-size:16px; }
+ .partner { padding:0 12px 8px; }
+ .logoLink { height:110px; }
+ .partner h3 { font-size:21px; min-height:46px; }
+ .enquiry { padding:35px 6vw 40px; }
+ .enquiryHeading { max-width:none; }
+ .enquiryHeading h2 { font-size:clamp(40px,8.5vw,60px); margin-bottom:26px; }
+ .enquiryForm { grid-template-columns:1fr; gap:30px; }
+ .formFields { margin-top:0; }
+ .choice span { min-height:75px; font-size:14px; padding:12px 7px; }
+ .opportunityDescription { min-height:0; font-size:20px; }
+ .approach { font-size:16px; }
+ .closing { grid-template-columns:1fr; padding:32px 6vw; gap:22px; }
+ .closing h2 { font-size:clamp(32px,7.7vw,55px); }
+ .closing p { font-size:16px; }
+ .footer { flex-direction:column; align-items:flex-start; padding:25px 6vw; }
+ .footer nav { gap:24px; flex-wrap:wrap; }
+}
+@media(max-width:600px) {
+ .partnerGrid { grid-template-columns:1fr; }
+ .partner { padding:28px 15px; }
+ .partner + .partner { border-left:0; border-top:1px solid #071b2e20; }
+ .logoLink { height:155px; max-width:250px; }
+ .partner h3 { min-height:0; margin-bottom:18px; font-size:25px; }
+ .communityPhoto { height:150px; }
+}
+@media(prefers-reduced-motion:reduce) { .cta { transition:none; } }
