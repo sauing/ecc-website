@@ -13,7 +13,7 @@ export default function ContactForm() {
     setDraftOpened(true);
   }
   return <form className={s.form} onSubmit={openDraft}>
-    <span className={s.eyebrow}>Get in touch</span><h2>Send us a message</h2>
+    <span className={s.eyebrow}>Contact us</span><h2>Send us a message</h2>
     <label htmlFor="contact-topic">Contact type <span>*</span></label>
     <select id="contact-topic" name="topic" required defaultValue=""><option value="" disabled>Select a topic</option><option>General enquiry</option><option>Membership</option><option>Youth cricket</option><option>Facilities</option><option>Club administration</option></select>
     <label htmlFor="contact-email">Your email <span>*</span></label><input id="contact-email" name="email" type="email" autoComplete="email" required maxLength={254} />
