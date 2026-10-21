@@ -21,7 +21,7 @@ export default function ContactPage() {
     <section className={s.content}>
       <div className={s.contactLayout}>
         <div className={s.details}>
-          <h2>Come say hello.</h2><p className={s.intro}>We’d love to hear from you. Get in touch, visit us at the club, or drop us an email.</p>
+          <h2>Come say hello.</h2><p className={s.intro}>We’d love to hear from you. Contact us, visit us at the club, or drop us an email.</p>
           <div className={s.contactRow}><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-9 8-14a8 8 0 0 0-16 0c0 5 8 14 8 14Z"/><circle cx="12" cy="8" r="3"/></svg><div><h3>Visit us</h3><address>Locatellistraat 3<br />5654 JB Eindhoven<br />North Brabant, Netherlands</address></div></div>
           <div className={s.contactRow}><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16"/><path d="m2 5 10 8L22 5"/></svg><div><h3>Email us</h3><a href="mailto:info@eindhovencc.com">info@eindhovencc.com</a></div></div>
           <iframe className={s.map} title="ECC location — Locatellistraat 3, Eindhoven" src="https://maps.google.com/maps?q=Locatellistraat%203%205654%20JB%20Eindhoven&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
