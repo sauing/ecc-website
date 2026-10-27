@@ -137,3 +137,23 @@
 @media(max-width:1100px){.featured{grid-template-columns:1fr 1.1fr}.featureCopy{padding:23px}.featurePhoto{min-height:420px}.featureCopy .actions{flex-direction:column}.eventCard{grid-template-columns:1fr}.eventCard>img{height:170px;min-height:0}.benefits span{font-size:15px}.portalGrid{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(4,1fr)}.eventSelect{grid-column:1/-1}.adminShell{grid-template-columns:180px minmax(0,1fr)}.adminSidebar{padding:25px 12px}.adminSidebar .portalBrand{font-size:15px}.overviewGrid{grid-template-columns:1.2fr 1fr}}
 @media(max-width:700px){.hero{padding:32px 20px}.hero p{font-size:18px}.hero .eyebrow{font-size:11px}.container{padding-inline:16px}.featured{grid-template-columns:1fr}.featurePhoto{height:260px;min-height:0}.featureCopy{padding:24px}.featureCopy .actions{flex-direction:row}.featureCopy h2{font-size:33px}.benefits{grid-template-columns:1fr;padding:0}.benefits>div{justify-content:start;padding:17px 24px}.benefits>div+div{border-left:0;border-top:1px solid #071b2e20}.benefits span{font-size:17px}.eventGrid{grid-template-columns:1fr}.eventCard{grid-template-columns:32% minmax(0,1fr)}.eventCard>img{height:100%}.eventCard>div{padding:16px}.tabs{gap:8px}.tabs button{font-size:16px;padding:12px 8px}.filterBar{gap:12px}.inlineLabel{font-size:14px}.track{padding:20px}.track span a{display:block;margin:8px 0 0}.demo span{display:block;margin:3px 0}.portalHeader{gap:15px;padding:13px 16px}.portalHeader>span{display:none}.portalBrand{font-size:15px}.panel{padding:20px}.overviewGrid{grid-template-columns:1fr}.statusPair{margin-left:0}.teamTitle h2{font-size:25px}.adminShell{grid-template-columns:1fr}.adminSidebar{padding:16px;gap:16px}.adminSidebar nav{display:flex;flex-wrap:wrap;gap:4px}.adminSidebar nav button{font-size:17px;padding:10px}.adminSidebar>small{display:none}.adminSidebar>a:not(.portalBrand){font-size:13px}.adminMain{padding:12px 16px 30px}.metrics{grid-template-columns:repeat(2,1fr)}.formGrid{grid-template-columns:1fr}.modal{padding:22px}.progress li{font-size:11px}.watermark{right:-35px}.tableWrap table{min-width:640px}}
 @media(prefers-reduced-motion:reduce){.page *,.adminShell *{scroll-behavior:auto}}
+@media(max-width:800px) {
+ .page select,.page input:not([type="checkbox"]),.page textarea,.adminShell input,.adminShell select,.adminShell textarea,.modal input,.modal select,.modal textarea { font-size:16px; }
+ .rowActions button,.rowActions a,.previewLinks a,.textButton { min-height:44px; display:inline-flex; align-items:center; }
+ .modal { max-height:calc(100dvh - 32px); }
+ .modal .sectionHead { display:grid; grid-template-columns:minmax(0,1fr) 44px; gap:12px; align-items:start; position:sticky; top:0; z-index:1; background:#f4f0e7; padding-block:8px; }
+ .modal .sectionHead h2 { font-size:26px; overflow-wrap:anywhere; }
+ .modal .sectionHead > button { width:44px; min-height:44px; padding:0; margin:0; }
+ .portalHeader { flex-wrap:wrap; }
+ .portalBrand { min-width:0; }
+ .filterBar > label { min-width:0; max-width:100%; }
+}
+@media(max-width:480px) {
+ .eventCard { grid-template-columns:1fr; }
+ .eventCard > img { height:160px; min-height:0; }
+ .eventCard h2 { font-size:28px; overflow-wrap:break-word; }
+ .eventCard > div { padding:20px; }
+ .featureCopy .actions > * { flex-basis:100%; }
+ .formGrid { min-width:0; }
+ .modal { width:calc(100% - 24px); padding:16px; }
+}

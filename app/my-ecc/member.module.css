@@ -55,3 +55,13 @@
 .page :is(a,button,select):focus-visible { outline:3px solid #bd8c25; outline-offset:3px; }
 @media(max-width:1050px) { .layout { grid-template-columns:160px minmax(0,1fr); gap:20px; } .topGrid { grid-template-columns:1fr; } .availability { flex-direction:column; align-items:flex-start; } }
 @media(max-width:700px) { .layout { grid-template-columns:1fr; padding:20px 16px; } .sidebar { padding:0; } .avatar,.sidebar > strong,.sidebar > span { display:none; } .sidebar nav { display:flex; flex-wrap:wrap; gap:6px 18px; margin:0; border:0; } .sidebar nav a { font-size:14px; padding:8px 0; } .header { flex-wrap:wrap; padding:12px 16px; } .brand { font-size:19px; } .hero,.card,.availability { padding:22px; } .metrics { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:700px) {
+ .sidebar nav a,.header > div a { min-height:44px; display:inline-flex; align-items:center; }
+ .header > div { flex-wrap:wrap; gap:8px 20px; }
+ .toolbar { flex-wrap:wrap; }
+ .toolbar select { font-size:16px; }
+ .team { flex-wrap:wrap; gap:12px; }
+ .availability a { max-width:100%; text-align:center; }
+ .card dl { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+ .card dd { overflow-wrap:anywhere; }
+}

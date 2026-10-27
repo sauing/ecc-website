@@ -64,3 +64,12 @@
 @media(max-width:800px) { .leaders { grid-template-columns:1fr; } .card { grid-template-columns:35% minmax(0,1fr); min-height:170px; } .hero p { font-size:19px; } .hero { min-height:190px; } .hero span { font-size:12px; letter-spacing:.15em; } .toolbar > div { gap:22px; } .header :global(.brand span) { font-size:18px; } .header :global(.join-button) { min-width:80px; } }
 @media(max-width:1200px) { .card { grid-template-columns:48% minmax(0,1fr); } }
 @media(max-width:800px) { .card { min-height:240px; } }
+@media(max-width:800px) {
+ .toolbar > div { gap:18px; flex-wrap:wrap; }
+ .toolbar label { width:100%; }
+ .toolbar input { width:100%; min-width:0; }
+ .formatBar button,.tableWrap th button { min-height:44px; }
+ .tableWrap td:nth-child(2),.tableWrap th:nth-child(2) { position:sticky; left:0; z-index:1; min-width:150px; max-width:170px; white-space:normal; }
+ .tableWrap th:nth-child(2) { z-index:2; }
+ .tableWrap td:nth-child(2) { border-right:1px solid #071b2e25; }
+}

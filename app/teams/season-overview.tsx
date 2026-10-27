@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import TableScroll from "../table-scroll";
 import s from "./season.module.css";
 type Match = readonly (string | null)[];
 type Player = readonly [string, number, number, number, number, number];
@@ -46,14 +47,14 @@ export default function SeasonOverview({ team, division, ladder, matches, player
     <div className={s.form}><span>Recent form</span>{matchesToShow.filter(m=>result(m)!=="—").slice(-5).map((m,i)=><b key={i} className={tone(m)} title={`${m[0]}: ${m[m.length-1]}`}>{result(m)}</b>)}</div>
     <div className={s.panels}>
       <section className={s.panel}><div className={s.panelHead}><h2>Match results</h2><span className={s.note}>{matchesToShow.length} fixtures</span></div>
-        <div className={s.scroll} tabIndex={0} aria-label="All season match results"><table className={s.table}><thead><tr><th>Date</th><th>Opponent</th><th>Result</th><th>Score / result detail</th></tr></thead><tbody>{matchesToShow.map((m,i)=><tr key={i}><td>{shortDate(m[0])}</td><td>{opponent(m)}</td><td><strong className={tone(m)}>{result(m)}</strong></td><td>{m.length>=6?<><span>{same(m[1],officialTeam)?m[2]:m[4]} – {same(m[1],officialTeam)?m[4]:m[2]}</span><small style={{display:"block",color:"#647080",marginTop:4}}>{m[5]}</small></>:m[m.length-1]??"Scheduled"}</td></tr>)}</tbody></table></div>
+        <div className={s.scroll} role="region" tabIndex={0} aria-label="All season match results"><table className={s.table}><thead><tr><th>Date</th><th>Opponent</th><th>Result</th><th>Score / result detail</th></tr></thead><tbody>{matchesToShow.map((m,i)=><tr key={i}><td>{shortDate(m[0])}</td><td>{opponent(m)}</td><td><strong className={tone(m)}>{result(m)}</strong></td><td>{m.length>=6?<><span>{same(m[1],officialTeam)?m[2]:m[4]} – {same(m[1],officialTeam)?m[4]:m[2]}</span><small style={{display:"block",color:"#647080",marginTop:4}}>{m[5]}</small></>:m[m.length-1]??"Scheduled"}</td></tr>)}</tbody></table></div>
       </section>
       <section className={s.panel}><div className={s.panelHead}><h2>Player rankings</h2><div className={s.tabs} role="group" aria-label="Ranking category">{(["batting","bowling","fielding"] as const).map(t=><button key={t} aria-pressed={rankingTab===t} onClick={()=>setRankingTab(t)}>{t}</button>)}</div></div>
         <table className={`${s.table} ${s.rank}`}><tbody>{rankings.map((p,i)=><tr key={p[0]}><td>{i+1}</td><td>{displayName(p[0])}</td><td><strong>{p[metric]}</strong> <small>{unit}</small></td></tr>)}</tbody></table>
       </section>
     </div>
     <section className={`${s.panel} ${s.squad}`}><div className={s.panelHead}><h2>Squad stats</h2><input className={s.search} aria-label="Search squad players" placeholder="Search players…" value={query} onChange={e=>setQuery(e.target.value)}/></div>
-      <div className={s.wide}><table className={s.table}><thead><tr>{["#","Player","Matches","Runs","Wickets","Catches"].map(t=><th key={t}>{t}</th>)}</tr></thead><tbody>{active.players.filter(p=>displayName(p[0]).toLowerCase().includes(query.toLowerCase())).map((p,i)=><tr key={p[0]}><td>{i+1}</td><td>{displayName(p[0])}</td>{p.slice(1,5).map((v,j)=><td key={j}>{v}</td>)}</tr>)}</tbody></table></div>
+      <TableScroll className={s.wide} label={team + " squad statistics"}><table className={s.table}><thead><tr>{["#","Player","Matches","Runs","Wickets","Catches"].map(t=><th key={t}>{t}</th>)}</tr></thead><tbody>{active.players.filter(p=>displayName(p[0]).toLowerCase().includes(query.toLowerCase())).map((p,i)=><tr key={p[0]}><td>{i+1}</td><td>{displayName(p[0])}</td>{p.slice(1,5).map((v,j)=><td key={j}>{v}</td>)}</tr>)}</tbody></table></TableScroll>
       <p className={s.note}>Team records for the selected season · Career totals available in <a href="/stats">Club Stats</a></p>
     </section>
   </section>;

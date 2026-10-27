@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import TeamHeader from "../teams/team-header";
+import TableScroll from "../table-scroll";
 import s from "./career-stats.module.css";
 
 type Row = Record<string, string> & { player: string };
@@ -41,8 +42,8 @@ export default function CareerStats({odi,t20}:{odi:Row[];t20:Row[]}) {
       </section>
       <p className={s.coverage}>Available records: 2026 · Career totals will grow as earlier and future seasons are added. Photos show ECC match action, not necessarily the named record holders.</p>
       <div className={s.toolbar}><div role="group" aria-label="Statistic type">{(Object.keys(columns) as (keyof typeof columns)[]).map(t=><button key={t} aria-pressed={tab===t} onClick={()=>{setTab(t);setSort(t==="batting"?"runs":t==="bowling"?"wickets":"catches");setDesc(true);}}>{t}</button>)}</div><label><span aria-hidden="true">⌕</span><input aria-label="Search player" placeholder="Search player…" value={query} onChange={e=>setQuery(e.target.value)}/></label></div>
-      <div className={s.tableWrap}><table><thead><tr><th>#</th>{columns[tab].map(([key,label])=><th key={key} aria-sort={sort===key ? desc?"descending":"ascending":"none"} className={sort===key?s.sorted:""}><button onClick={()=>{setSort(key);setDesc(sort===key?!desc:key!=="player");}}>{label}{sort===key && <span> {desc?"▾":"▴"}</span>}</button></th>)}</tr></thead>
-        <tbody>{visible.map((r,i)=><tr key={r.player}><td>{i+1}</td>{columns[tab].map(([key])=><td key={key} className={sort===key?s.sorted:""}>{key==="player"?name(r.player):r[key]}</td>)}</tr>)}{!visible.length && <tr><td colSpan={columns[tab].length+1}>No players found.</td></tr>}</tbody></table></div>
+      <TableScroll className={s.tableWrap} label={"Club career " + tab + " statistics"}><table><thead><tr><th>#</th>{columns[tab].map(([key,label])=><th key={key} aria-sort={sort===key ? desc?"descending":"ascending":"none"} className={sort===key?s.sorted:""}><button onClick={()=>{setSort(key);setDesc(sort===key?!desc:key!=="player");}}>{label}{sort===key && <span> {desc?"▾":"▴"}</span>}</button></th>)}</tr></thead>
+        <tbody>{visible.map((r,i)=><tr key={r.player}><td>{i+1}</td>{columns[tab].map(([key])=><td key={key} className={sort===key?s.sorted:""}>{key==="player"?name(r.player):r[key]}</td>)}</tr>)}{!visible.length && <tr><td colSpan={columns[tab].length+1}>No players found.</td></tr>}</tbody></table></TableScroll>
       <footer>Career totals across recorded seasons · ODI and T20 tracked separately · {visible.length} players</footer>
     </div>
   </main>;

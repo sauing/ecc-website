@@ -49,6 +49,17 @@ export default function TeamHeader() {
         {links.slice(2).map(link)}
         {compact && <a className={s.compactJoin} href="/join">Join ECC <span aria-hidden="true">↗</span></a>}
       </nav>
-    <details className={s.mobile}><summary>Menu</summary><nav aria-label="Mobile navigation">{links.map(link)}{teamLinks}<a href="/login">My ECC / Login</a></nav></details>
+    <details className={s.mobile}>
+      <summary>Menu <span className={s.menuIcon} aria-hidden="true" /></summary>
+      <nav aria-label="Mobile navigation" className={s.mobilePanel}>
+        <span className={s.mobileLabel}>Explore the club</span>
+        <div className={s.mobileLinks}>{links.map(link)}</div>
+        <details className={s.mobileTeams} open={pathname.startsWith("/teams/") || undefined}>
+          <summary>Our teams <span aria-hidden="true">+</span></summary>
+          <div className={s.mobileTeamLinks}>{teamLinks}</div>
+        </details>
+        <a className={s.mobileAccount} href="/login">My ECC / Login <span aria-hidden="true">↗</span></a>
+      </nav>
+    </details>
   </header>;
 }

@@ -41,7 +41,7 @@ export default async function Home() {
           </div>
           <small>People · Friendship · Cricket for life</small>
         </a>
-        <a className="feature feature-youth" id="youth" href="#">
+        <a className="feature feature-youth" id="youth" href="/youth">
           <span className="feature-number">03</span>
           <div>
             <h2>Youth<br />Cricket</h2>

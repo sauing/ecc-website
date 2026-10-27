@@ -82,6 +82,7 @@ Status values: `Planned` · `In progress` · `Developed` · `Blocked`
 - [ ] `Planned` — Content migration from SportsPlus
 - [ ] `Planned` — SEO redirects and metadata
 - [ ] `Planned` — Mobile and accessibility testing
+- [ ] `Developed` — Responsive layout checks across all 20 routes at phone, tablet and desktop widths; touch controls and accessible table scrolling
 - [ ] `Planned` — Security and permission review
 - [ ] `Planned` — Domain connection
 - [ ] `Planned` — Production launch

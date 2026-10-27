@@ -50,3 +50,12 @@
 .content button:focus-visible,.content select:focus-visible { outline:3px solid #ba8c24; outline-offset:3px; }
 @media(max-width:1000px) { .panels { grid-template-columns:1fr; } }
 @media(max-width:600px) { .summary { grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px 0; } .summary > div:nth-child(3) { border:0; } .hero p { font-size:19px; } .hero div > span { font-size:12px; } .hero { min-height:190px; } .table td,.table th { padding:10px 8px; } .controls label,.controls span { margin-right:6px; } }
+@media(max-width:800px) {
+ .controls > div { flex-wrap:wrap; }
+ .controls select,.controls button,.tabs button { min-height:44px; }
+ .tabs { gap:14px; }
+ .search { width:100%; min-height:44px; font-size:16px; }
+ .wide th:nth-child(2),.wide td:nth-child(2) { position:sticky; left:0; z-index:1; min-width:145px; max-width:170px; background:#fffdf8; border-right:1px solid #071b2e25; }
+ .wide th:nth-child(2) { background:#071b2e; z-index:2; }
+ .wide tr:nth-child(even) td:nth-child(2) { background:#f4f0e7; }
+}
