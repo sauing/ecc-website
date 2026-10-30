@@ -4,6 +4,8 @@ Next.js / React / TypeScript proof of concept for replacing the club's SportsPlu
 
 ## Local development
 
+New to running websites? Follow [START-HERE.md](START-HERE.md) for the step-by-step Windows guide.
+
 Install Node.js and pnpm, then run:
 
 ```sh
