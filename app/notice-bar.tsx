@@ -1,7 +1,25 @@
+"use client";
+import { useEffect, useState } from "react";
 import { clubNotice, type ClubNotice } from "./club-notice";
 import s from "./notice-bar.module.css";
 
-export default function NoticeBar({ notice = clubNotice }: { notice?: ClubNotice | null }) {
+export default function NoticeBar({ notice: providedNotice }: { notice?: ClubNotice | null }) {
+  const [published, setPublished] = useState<ClubNotice | null>(null);
+  useEffect(() => {
+    if (providedNotice !== undefined) return;
+    const controller = new AbortController();
+    const load = async () => {
+      try {
+        const response = await fetch("/api/club-notice", { signal: controller.signal });
+        if (!response.ok) return;
+        const value = await response.json();
+        if (!value || (typeof value.message === "string" && (!value.action || (typeof value.action.href === "string" && typeof value.action.label === "string")))) setPublished(value);
+      } catch { /* Keep the existing public motto/content when offline. */ }
+    };
+    void load(); const timer = window.setInterval(load, 60000);
+    return () => { controller.abort(); window.clearInterval(timer); };
+  }, [providedNotice]);
+  const notice = providedNotice === undefined ? published ?? clubNotice : providedNotice;
   const action = notice?.action;
   // Accept site-relative paths or HTTPS destinations, never executable schemes.
   const safeLink = action && (/^\/(?!\/)/.test(action.href) || /^https:\/\//i.test(action.href));

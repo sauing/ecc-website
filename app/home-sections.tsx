@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { clubPhotos } from "./club-photos";
 
 const slides = [
   { src: "/images/about/match-action.jpg", title: "Cricket with ambition", caption: "Competitive teams representing Eindhoven across the Dutch cricket pyramid." },
@@ -10,6 +11,7 @@ const slides = [
   { src: "/images/gallery/youth-1.jpg", title: "The next generation", caption: "Youth cricket focused on confidence, friendship and skill." },
   { src: "/images/gallery/centre-pitch.jpg", title: "Cricket at the centre", caption: "Training facilities and match days in the heart of Eindhoven." },
   { src: "/images/about/community.jpg", title: "Play, belong, grow", caption: "A multicultural club where every generation shares the game." },
+  ...clubPhotos,
 ];
 
 const socialPosts = {
@@ -27,12 +29,14 @@ const socialPosts = {
 
 export function HomeSections() {
   const [slide, setSlide] = useState(0);
+  const [paused, setPaused] = useState(false);
   const [network, setNetwork] = useState<"instagram" | "facebook">("instagram");
 
   useEffect(() => {
+    if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const timer = window.setInterval(() => setSlide((current) => (current + 1) % slides.length), 5500);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [paused]);
 
   const activeSlide = slides[slide];
 
@@ -52,17 +56,18 @@ export function HomeSections() {
         </div>
 
         <div className="slideshow" aria-label="ECC photo slideshow">
-          <img src={activeSlide.src} alt={activeSlide.title} />
+          <img src={activeSlide.src} alt={"alt" in activeSlide ? activeSlide.alt : activeSlide.title} />
           <div className="slide-caption">
             <span>{String(slide + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</span>
             <h3>{activeSlide.title}</h3>
             <p>{activeSlide.caption}</p>
           </div>
-          <div className="slide-controls">
+          <div className="slide-controls slide-controls-expanded">
             <button type="button" aria-label="Previous photo" onClick={() => setSlide((slide - 1 + slides.length) % slides.length)}>←</button>
-            <div className="slide-dots">
-              {slides.map((item, index) => <button key={item.src} type="button" aria-label={`Show photo ${index + 1}`} className={slide === index ? "active" : ""} onClick={() => setSlide(index)} />)}
-            </div>
+            <select aria-label="Choose photo" value={slide} onChange={(event) => setSlide(Number(event.target.value))}>
+              {slides.map((item, index) => <option key={item.src} value={index}>{index + 1} / {slides.length} · {item.title}</option>)}
+            </select>
+            <button type="button" aria-label={paused ? "Play slideshow" : "Pause slideshow"} aria-pressed={paused} onClick={() => setPaused(!paused)}>{paused ? "▶" : "Ⅱ"}</button>
             <button type="button" aria-label="Next photo" onClick={() => setSlide((slide + 1) % slides.length)}>→</button>
           </div>
         </div>

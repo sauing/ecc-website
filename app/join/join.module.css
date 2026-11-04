@@ -7,7 +7,7 @@
 .layout { max-width:1180px; margin:40px auto; padding:0 24px 40px; display:grid; grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr); gap:36px; align-items:start; }
 .story { position:relative; overflow:hidden; background:#071b2e; color:#fffdf8; padding:34px; }
 .kicker { color:#d42930; font:700 13px/1.5 "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.13em; }
-.story h1 { position:relative; z-index:1; font:700 clamp(38px,4vw,54px)/1.15 Georgia,serif; margin:12px 0; }
+.story h1 { position:relative; z-index:1; font:700 clamp(38px,4vw,54px)/1.05 "Barlow Condensed",sans-serif; margin:12px 0; }
 .story > img { position:absolute; width:180px; right:-45px; top:10px; transform:rotate(-8deg); opacity:.1; pointer-events:none; }
 .story ol { list-style:none; padding:0; margin:32px 0; }
 .story li { display:flex; align-items:center; gap:12px; padding:12px 0; color:#aab8c4; }
@@ -17,7 +17,7 @@
 .story li[data-complete="true"] { color:#fffdf8; }
 .story small { display:block; color:#b9c6d1; font-size:12px; }
 .panel { background:#fffdf8; border-top:3px solid #d42930; padding:30px; min-width:0; }
-.panel h2 { font:700 clamp(26px,3vw,36px)/1.2 Georgia,serif; margin:10px 0 22px; }
+.panel h2 { font:700 clamp(26px,3vw,36px)/1.1 "Barlow Condensed",sans-serif; margin:10px 0 22px; }
 .panel p { margin:14px 0; }
 .panel label:not(.option):not(.check) { display:block; margin-top:16px; font-weight:600; }
 .panel input:not([type="radio"]):not([type="checkbox"]),.panel textarea { display:block; box-sizing:border-box; width:100%; padding:11px 12px; border:1px solid #071b2e50; background:white; color:#071b2e; font:400 16px/1.4 "Barlow",sans-serif; margin:6px 0; border-radius:0; }
@@ -60,3 +60,5 @@
  .summary { grid-template-columns:minmax(0,1fr) minmax(0,1.4fr); }
  .email { padding:16px; }
 }
+
+.joinBenefits{display:grid;gap:20px;margin:30px 0;border-block:1px solid #071b2e20;padding:24px 0}.joinBenefits strong,.joinBenefits span{display:block}.joinBenefits strong{font:600 20px/1.2 "Barlow Condensed",sans-serif}.joinBenefits span{color:#526174;font-size:14px;margin-top:6px;line-height:1.6}.joinLink{display:inline-flex;align-items:center;min-height:44px;color:#9b2932;font-size:14px;text-decoration:underline;text-underline-offset:4px}.header>a:last-child{max-width:100%;font-size:14px}.story h1{max-width:340px}.panel h2:focus{outline:none}

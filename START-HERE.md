@@ -10,7 +10,7 @@ Open each link in your browser, download the Windows installer, and open the dow
 
 | Tool | Download | What to choose |
 | --- | --- | --- |
-| Node.js — runs the website | [Node.js download](https://nodejs.org/en/download) | Choose **LTS**, Windows, and the **.msi installer**. Keep the usual installer settings. |
+| Node.js — runs the website | [Node.js download](https://nodejs.org/en/download) | Choose **Node.js 24 LTS or newer**, Windows, and the **.msi installer**. Keep the usual installer settings. |
 | Git — copies the website files | [Git for Windows](https://git-scm.com/install/windows) | Choose the Windows setup download. Keep the usual installer settings. |
 | Visual Studio Code — edits files | [VS Code download](https://code.visualstudio.com/download) | Choose the Windows installer. This is **Visual Studio Code**, not Visual Studio. |
 
