@@ -90,9 +90,6 @@ export default function YouthPage() {
         <p className={s.contactNote}>Opens an email to our club. Prefer a form? <a href="/contact">Get in touch</a>.</p>
       </section>
     </main>
-    <footer className={s.footer}>
-      <a className={s.footerBrand} href="/" aria-label="Eindhoven Cricket Club home"><Image src="/images/ecc-logo.png" width={37} height={44} alt="" /><span>Eindhoven Cricket Club<small>Established 1915</small></span></a>
-      <nav aria-label="Footer navigation"><a href="/">Home</a><a href="/youth" aria-current="page">Youth</a><a href="/membership">Membership</a><a href="/contact">Contact</a></nav>
-    </footer>
+
   </>;
 }

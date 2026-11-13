@@ -61,12 +61,7 @@
 .invitation .contactNote { font-size:13px !important; margin:13px 0 0 !important; color:#536274; }
 .contactNote a { text-decoration:underline; text-underline-offset:3px; }
 .closingNote { position:absolute; right:4vw; top:45px; transform:rotate(8deg); text-align:left; }
-.footer { margin:0; padding:22px 5vw; border-top:1px solid #071b2e25; background:var(--cream); display:flex; justify-content:space-between; gap:24px; align-items:center; }
-.footerBrand { display:flex; align-items:center; gap:12px; font:800 16px/1.2 "Barlow Condensed",Arial,sans-serif; text-transform:uppercase; }
-.footerBrand small { display:block; margin-top:4px; font-size:12px; color:#8b6326; }
-.footer nav { display:flex; gap:25px; font-size:14px; font-weight:600; flex-wrap:wrap; }
-.footer a:hover,.footer a[aria-current="page"] { color:var(--red); }
-.page a:focus-visible,.footer a:focus-visible { outline:3px solid #bd8c25; outline-offset:5px; }
+.page a:focus-visible { outline:3px solid #bd8c25; outline-offset:5px; }
 @media(min-width:1600px) { .hero { padding-inline:80px; } }
 @media(max-width:1000px) and (min-width:761px) { .hero { gap:18px; padding-inline:4vw; } .hero h1 { font-size:7.8vw; } .teamwork { display:none; } .discover { gap:32px; padding-inline:4vw; } .discover h2 { font-size:4.9vw; } .discoverCopy > p:not(.eyebrow) { font-size:16px; } .memories { gap:35px; } .memories h2 { font-size:7vw; } .memoriesCopy > p { font-size:16px; } .invitation { padding-inline:100px; } .closingNote { display:none; } }
 @media(max-width:760px) {
@@ -103,7 +98,6 @@
  .invitation { padding:40px 6vw 32px; }
  .invitation h2 { font-size:clamp(38px,9vw,58px); }
  .closingNote { display:none; }
- .footer { padding:22px 6vw; flex-direction:column; align-items:flex-start; gap:20px; }
- .footer nav { gap:22px; }
+
 }
 @media(prefers-reduced-motion:reduce) { .cta { transition:none; } .cta:hover { transform:none; } }

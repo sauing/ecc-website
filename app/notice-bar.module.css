@@ -3,6 +3,11 @@
 .login:focus-visible { outline:2px solid #f4f0e7; outline-offset:3px; }
 .badge { flex-shrink:0; padding:1px 8px; border-radius:2px; background:#d42930; color:white; font-size:11px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
 .established { flex-shrink:0; color:#fffdf8; font-size:11px; letter-spacing:.14em; text-transform:uppercase; padding-right:18px; border-right:1px solid #ffffff35; }
+.socialLinks { display:flex; align-items:center; gap:14px; flex-shrink:0; }
+.socialLink { width:16px; height:16px; display:grid; place-items:center; color:#fffdf8; }
+.socialLink svg { display:block; width:12px; height:12px; }
+.socialLink:hover { opacity:.75; }
+.socialLink:focus-visible { outline:2px solid #f4f0e7; outline-offset:3px; }
 .message { flex:1; min-width:0; overflow-wrap:anywhere; letter-spacing:.06em; }
 .action { flex-shrink:0; display:flex; gap:10px; align-items:center; font-size:12px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; }
 .action:hover { text-decoration:underline; text-underline-offset:3px; }

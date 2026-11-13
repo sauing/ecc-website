@@ -5,7 +5,7 @@ import s from "./site-header.module.css";
 import NoticeBar from "../notice-bar";
 
 const teams = ["ecc1","ecc2","ecc3","ecc4","youth-1","youth-2"];
-const links = [["/about","Club"],["/stats","Stats"],["/tournaments","Tournaments"],["/youth","Youth"],["/partners","Partners"],["/membership","Membership"],["/contact","Contacts"],["/social","Social"]];
+const links = [["/about","Club"],["/stats","Stats"],["/tournaments","Tournaments"],["/youth","Youth"],["/partners","Partners"],["/membership","Membership"],["/contact","Contacts"],["/social","NEWS"]];
 export default function TeamHeader() {
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
@@ -33,6 +33,8 @@ export default function TeamHeader() {
     };
   }, []);
   const link = ([href,label]: string[]) => <a key={href} href={href} aria-current={pathname===href || pathname.startsWith(`${href}/`) ? "page" : undefined}>{label}</a>;
+  const desktopLink = ([href,label]: string[]) => link([href, href === "/stats" ? "STATS" : href === "/about" ? "ABOUT US" : href === "/contact" ? "CONTACT US" : label]);
+  const mobileLink = ([href,label]: string[]) => link([href, href === "/contact" ? "CONTACT US" : label]);
   const teamLinks = teams.map(t=><a key={t} href={`/teams/${t}`} aria-current={pathname===`/teams/${t}` ? "page" : undefined}>{t.replace("-"," ").toUpperCase()}</a>);
   return <header className={s.header} ref={headerRef}>
     <div ref={mastheadRef}>
@@ -44,16 +46,21 @@ export default function TeamHeader() {
     </div>
       <nav className={s.nav} data-compact={compact} aria-label="Main navigation">
         {compact && <a className={s.compactBrand} href="/" aria-label="Eindhoven Cricket Club home"><img src="/images/ecc-logo.png" alt="ECC crest" /></a>}
-        {links.slice(0,2).map(link)}
+        {link(["/", "HOME"])}
+        {desktopLink(links[0])}
+        {desktopLink(links[7])}
         <details className={s.menu}><summary data-active={pathname.startsWith("/teams")}>Teams <span>▾</span></summary><div className={s.dropdown}>{teamLinks}</div></details>
-        {links.slice(2).map(link)}
+        {desktopLink(links[1])}
+        {desktopLink(links[3])}
+        {desktopLink(links[2])}
+        {links.slice(4,7).map(desktopLink)}
         {compact && <a className={s.compactJoin} href="/join">Join ECC <span aria-hidden="true">↗</span></a>}
       </nav>
     <details className={s.mobile}>
       <summary>Menu <span className={s.menuIcon} aria-hidden="true" /></summary>
       <nav aria-label="Mobile navigation" className={s.mobilePanel}>
         <span className={s.mobileLabel}>Explore the club</span>
-        <div className={s.mobileLinks}>{links.map(link)}</div>
+        <div className={s.mobileLinks}>{links.map(mobileLink)}</div>
         <details className={s.mobileTeams} open={pathname.startsWith("/teams/") || undefined}>
           <summary>Our teams <span aria-hidden="true">+</span></summary>
           <div className={s.mobileTeamLinks}>{teamLinks}</div>

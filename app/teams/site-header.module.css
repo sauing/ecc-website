@@ -19,8 +19,9 @@
 .menu summary { list-style:none; cursor:pointer; }
 .menu summary::-webkit-details-marker { display:none; }
 .menu summary span { font-size:14px; margin-left:7px; }
-.dropdown { position:absolute; top:100%; left:50%; transform:translateX(-50%); display:grid; grid-template-columns:1fr 1fr; min-width:240px; padding:10px; background:#f4f0e7; border:1px solid #071b2e25; border-top:3px solid #d42930; box-shadow:0 12px 24px #071b2e20; }
+.dropdown { position:absolute; top:100%; left:54.5px; transform:translateX(-50%); display:flex; flex-direction:column; flex-wrap:wrap; align-items:stretch; margin-left:auto; margin-right:auto; min-width:144px; padding:10px; background:#f4f0e7; border:1px solid #071b2e25; border-top:3px solid #d42930; box-shadow:0 12px 24px #071b2e20; }
 .dropdown a { padding:12px; font-size:20px; }
+.dropdown a[href="/teams/ecc1"] { width:auto; align-self:center; margin-right:auto; }
 .nav[data-compact="true"] { padding-inline:3vw; gap:clamp(8px,1.5vw,22px); }
 .nav .compactBrand { display:flex; align-items:center; justify-content:center; flex:0 0 38px; padding:0; border:0; }
 .compactBrand img { display:block; width:32px; height:42px; object-fit:contain; }

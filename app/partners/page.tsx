@@ -36,6 +36,6 @@ export default function PartnersPage() {
       </section>
       <section className={s.closing} aria-labelledby="closing-heading"><h2 id="closing-heading">A local connection.<br />A lasting conversation.</h2><p>Businesses, supporters and community members all play a part in a stronger, more inclusive future for cricket in Eindhoven.</p></section>
     </main>
-    <footer className={s.footer}><a className={s.footerBrand} href="/">Eindhoven Cricket Club<small>Established 1915</small></a><nav aria-label="Footer navigation"><a href="/about">Club</a><a href="/youth">Youth</a><a href="/partners" aria-current="page">Partners</a><a href="/contact">Contact</a></nav></footer>
+
   </>;
 }

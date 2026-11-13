@@ -55,11 +55,16 @@ export default async function Home() {
 
       <section className="sponsors" aria-labelledby="sponsors-title">
         <div className="sponsors-heading">
-          <span>Backing cricket in Eindhoven</span>
+          <span>Backing cricket in Eindhoven area</span>
           <h2 id="sponsors-title"><a href="/partners">Our partners</a></h2>
         </div>
-        <div className="sponsor-list">
-          {partners.map(partner => <a key={partner.name} href={partner.website} target="_blank" rel="noreferrer" aria-label={`Visit ${partner.name}`}><img src={partner.logo} alt={partner.name} /></a>)}
+        <div className="sponsor-featured" role="group" aria-label="Featured partners">
+          <a className="sponsor-featured-logo" href={partners[0].website} target="_blank" rel="noreferrer" aria-label={`Visit ${partners[0].name}`}><img src={partners[0].logo} alt={partners[0].name} /></a>
+          <div className="kncb-placeholder" role="img" aria-label="Temporary KNCB logo placeholder"><span className="kncb-seal" aria-hidden="true">✦</span><span className="kncb-wordmark"><strong>KNCB</strong><small>TEMPORARY MARK</small></span></div>
+        </div>
+        <div className="sponsor-list" role="group" aria-label="Other partners">
+          {partners.slice(1).map(partner => <a key={partner.name} href={partner.website} target="_blank" rel="noreferrer" aria-label={`Visit ${partner.name}`}><img src={partner.logo} alt={partner.name} /></a>)}
+          {[1, 2, 3, 4].map(number => <div className={`sponsor-placeholder sponsor-placeholder-${number}`} key={number} role="img" aria-label={`Temporary partner logo ${number}`}><span className="sponsor-placeholder-mark" aria-hidden="true">ECC</span><span>PARTNER <strong>0{number}</strong></span></div>)}
         </div>
         <a className="sponsor-cta" href="/partners#partnership-enquiry">Become a partner <span>→</span></a>
       </section>
