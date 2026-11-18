@@ -23,6 +23,6 @@ export default function PasswordLogin() {
     <button className={s.textButton} type="button" aria-pressed={show} onClick={() => setShow(!show)}>{show ? "Hide password" : "Show password"}</button>
     {error && <p role="alert" className={s.error}>{error}</p>}
     <button className={s.primary} disabled={busy}>{busy ? "Signing in…" : "Sign in →"}</button>
-    <p className={s.hint}>Forgot your password? Contact the website maintainer for an account reset.</p>
+    <a className={s.recoveryLink} href="/forgot-password">Forgot your password?</a>
   </form>;
 }
