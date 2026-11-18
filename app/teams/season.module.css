@@ -1,5 +1,5 @@
-.page { background:#f4f0e7; color:#071b2e; min-height:100vh; }
-.hero { position:relative; overflow:hidden; background:#071b2e; color:#fffdf8; padding:30px 5vw; min-height:210px; display:flex; align-items:center; }
+.page { background:#f3f7fa; color:#071b2e; min-height:100vh; }
+.hero { position:relative; overflow:hidden; background:#071b2e; color:#ffffff; padding:30px 5vw; min-height:210px; display:flex; align-items:center; }
 .hero > div { position:relative; z-index:1; }
 .hero div > span { font:700 15px "Barlow Condensed",sans-serif; color:#e32636; letter-spacing:.2em; text-transform:uppercase; }
 .hero h1 { margin:8px 0 0; font:700 clamp(50px,6.5vw,100px)/1 Georgia,serif; text-transform:uppercase; }
@@ -10,7 +10,7 @@
 .controls { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; padding:14px 0; border-bottom:1px solid #071b2e25; }
 .controls > div { display:flex; align-items:center; gap:8px; }
 .controls label,.controls span { font:700 15px "Barlow Condensed",sans-serif; text-transform:uppercase; margin-right:16px; }
-.controls select,.controls button { padding:9px 22px; border:1px solid #071b2e70; border-radius:4px; background:#fffdf8; color:#071b2e; font:700 17px "Barlow Condensed",sans-serif; }
+.controls select,.controls button { padding:9px 22px; border:1px solid #071b2e70; border-radius:4px; background:#ffffff; color:#071b2e; font:700 17px "Barlow Condensed",sans-serif; }
 .controls button { cursor:pointer; }
 .controls button[aria-pressed="true"] { color:white; background:#d42930; border-color:#d42930; }
 .summary { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); padding:20px 0 12px; }
@@ -24,7 +24,7 @@
 .form b { display:grid; place-items:center; width:28px; height:28px; border-radius:3px; color:white; background:#647080; font:700 15px "Barlow Condensed",sans-serif; }
 .form b.win { background:#218347; } .form b.loss { background:#d42930; }
 .panels { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); gap:18px; }
-.panel { background:#fffdf8; border:1px solid #071b2e55; border-radius:3px; padding:16px; min-width:0; }
+.panel { background:#ffffff; border:1px solid #071b2e55; border-radius:3px; padding:16px; min-width:0; }
 .panel h2 { margin:0; font:700 25px "Barlow Condensed",sans-serif; text-transform:uppercase; }
 .panelHead { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:12px; }
 .tabs { display:flex; gap:18px; flex-wrap:wrap; }
@@ -34,7 +34,7 @@
 .table { border-collapse:collapse; width:100%; font:14px "Barlow",sans-serif; font-variant-numeric:tabular-nums; }
 .table th { background:#071b2e; color:white; font:600 14px "Barlow Condensed",sans-serif; text-transform:uppercase; text-align:left; padding:12px; position:sticky; top:0; }
 .table td { padding:12px; border-bottom:1px solid #071b2e0b; }
-.table tbody tr:nth-child(even) { background:#f4f0e7; }
+.table tbody tr:nth-child(even) { background:#f3f7fa; }
 .table td:first-child { white-space:nowrap; }
 .rank td:nth-child(2) { font:700 18px "Barlow Condensed",sans-serif; }
 .rank td:last-child { text-align:right; white-space:nowrap; }
@@ -55,7 +55,7 @@
  .controls select,.controls button,.tabs button { min-height:44px; }
  .tabs { gap:14px; }
  .search { width:100%; min-height:44px; font-size:16px; }
- .wide th:nth-child(2),.wide td:nth-child(2) { position:sticky; left:0; z-index:1; min-width:145px; max-width:170px; background:#fffdf8; border-right:1px solid #071b2e25; }
+ .wide th:nth-child(2),.wide td:nth-child(2) { position:sticky; left:0; z-index:1; min-width:145px; max-width:170px; background:#ffffff; border-right:1px solid #071b2e25; }
  .wide th:nth-child(2) { background:#071b2e; z-index:2; }
- .wide tr:nth-child(even) td:nth-child(2) { background:#f4f0e7; }
+ .wide tr:nth-child(even) td:nth-child(2) { background:#f3f7fa; }
 }

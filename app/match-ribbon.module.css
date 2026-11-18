@@ -1,6 +1,6 @@
 .ribbon {
   --ink: #0b2038;
-  --paper: #f8f5ed;
+  --paper: var(--cream, #f3f7fa);
   --accent: #df1729;
   display: grid;
   grid-template-columns: 25% 13% 9% minmax(0, 1fr) 16%;

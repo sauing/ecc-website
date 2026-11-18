@@ -1,5 +1,5 @@
-.page { background:#f4f0e7; color:#071b2e; }
-.hero { position:relative; overflow:hidden; padding:30px 5vw 26px; background:#071b2e; color:#fffdf8; }
+.page { background:#f3f7fa; color:#071b2e; }
+.hero { position:relative; overflow:hidden; padding:30px 5vw 26px; background:#071b2e; color:#ffffff; }
 .heroCopy { position:relative; z-index:1; }
 .eyebrow { font:700 13px/1.4 "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.22em; color:#d42930; }
 .hero h1 { font:700 clamp(42px,6vw,80px)/1.05 Georgia,serif; margin:4px 0 16px; }

@@ -16,7 +16,7 @@
 .textLink { font-size:16px; line-height:1.5; border-bottom:1px solid var(--red); padding-bottom:3px; }
 .textLink:hover { color:var(--red); }
 .collage { position:relative; min-width:0; padding:16px 12px 72px 4px; }
-.heroPrint,.friendsPrint,.teamPrint,.memoryPrint { background:#fffdf8; padding:14px 14px 0; box-shadow:0 8px 16px #071b2e22; }
+.heroPrint,.friendsPrint,.teamPrint,.memoryPrint { background:#ffffff; padding:14px 14px 0; box-shadow:0 8px 16px #071b2e22; }
 .heroPrint { width:93%; transform:rotate(3deg); }
 .heroPhoto { position:relative; aspect-ratio:1.06; overflow:hidden; }
 .heroPhoto img { object-fit:cover; object-position:48% 55%; transform:scale(1.28); transform-origin:50% 65%; }
@@ -27,7 +27,7 @@
 .friendsPrint figcaption { font-size:clamp(17px,1.55vw,23px); color:var(--red); padding:10px 0 13px; }
 .note { color:var(--red); font:600 22px/1.1 "Caveat","Segoe Print",cursive; }
 .teamwork { position:absolute; left:-80px; top:0; width:120px; transform:rotate(-12deg); z-index:2; }
-.values { display:flex; justify-content:center; align-items:center; gap:clamp(20px,4vw,65px); background:var(--red); color:#fffdf8; padding:24px 4vw; font:800 clamp(20px,2.9vw,42px)/1.1 "Barlow Condensed",Arial,sans-serif; text-transform:uppercase; }
+.values { display:flex; justify-content:center; align-items:center; gap:clamp(20px,4vw,65px); background:var(--red); color:#ffffff; padding:24px 4vw; font:800 clamp(20px,2.9vw,42px)/1.1 "Barlow Condensed",Arial,sans-serif; text-transform:uppercase; }
 .values span + span { border-left:1px solid #fff8; padding-left:clamp(20px,4vw,65px); }
 .discover { max-width:1600px; margin:auto; padding:64px 5vw 70px; display:grid; grid-template-columns:1.12fr 1fr; gap:55px; align-items:center; scroll-margin-top:90px; }
 .teamPrint { transform:rotate(-2deg); }
@@ -44,7 +44,7 @@
 .memoryPrint > img { display:block; width:100%; height:auto; aspect-ratio:1.65; object-fit:cover; object-position:50% 10%; }
 .memoryPrint figcaption { color:var(--red); font-size:23px; padding:10px 8px 2px; }
 .memories h2 { margin:0 0 25px; font-size:clamp(60px,6.4vw,95px); line-height:.95; font-weight:900; }
-.memoriesCopy > p { font-size:18px; line-height:1.55; max-width:470px; margin:0; color:#f4f0e7e8; }
+.memoriesCopy > p { font-size:18px; line-height:1.55; max-width:470px; margin:0; color:#f3f7fae8; }
 .family { max-width:1600px; margin:auto; padding:64px 5vw 60px; }
 .familyHeading { max-width:690px; margin-bottom:38px; }
 .familyHeading h2 { margin:0 0 20px; font-size:clamp(44px,5vw,74px); line-height:.98; font-weight:900; }

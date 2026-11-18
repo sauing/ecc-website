@@ -1,4 +1,4 @@
-.header { position:sticky; top:calc(-1 * var(--masthead-height, 140px)); z-index:50; background:#f4f0e7; border-bottom:1px solid #071b2e25; }
+.header { position:sticky; top:calc(-1 * var(--masthead-height, 140px)); z-index:50; background:#f3f7fa; border-bottom:1px solid #071b2e25; }
 .header:has(> div :focus-visible) { top:0; }
 .inner { min-height:100px; padding:10px 4vw; display:flex; align-items:center; justify-content:space-between; gap:24px; }
 .brand { display:flex; align-items:center; gap:28px; min-width:0; color:#071b2e; }
@@ -10,6 +10,15 @@
 .join { background:#d42930; color:white; padding:18px 32px; font:700 24px/1.2 "Barlow Condensed",sans-serif; text-transform:uppercase; white-space:nowrap; display:flex; align-items:center; gap:22px; flex-shrink:0; clip-path:polygon(15px 0,100% 0,calc(100% - 15px) 100%,0 100%); }
 .join span { font-size:29px; line-height:1; }
 .join:hover { background:#b91d28; }
+.headerActions { display:flex; align-items:center; gap:24px; flex-shrink:0; }
+.kncb { display:flex; align-items:center; padding-right:24px; border-right:1px solid #071b2e25; }
+.kncb img { display:block; width:48px; height:54px; object-fit:contain; }
+@media(max-width:800px) {
+ .inner { flex-wrap:wrap; }
+ .headerActions { margin-left:auto; gap:14px; }
+ .kncb { padding-right:14px; }
+ .kncb img { width:36px; height:42px; }
+}
 .nav { display:flex; justify-content:space-between; align-items:center; gap:clamp(6px,1.2vw,20px); padding:0 4vw; border-top:1px solid #071b2e25; }
 .nav a,.nav summary { font:700 clamp(18px,1.75vw,24px)/1.2 "Barlow Condensed",sans-serif; letter-spacing:.035em; text-transform:uppercase; white-space:nowrap; color:#071b2e; }
 .nav > a,.nav summary { padding:11px 10px 9px; border-bottom:3px solid transparent; }
@@ -19,10 +28,11 @@
 .menu summary { list-style:none; cursor:pointer; }
 .menu summary::-webkit-details-marker { display:none; }
 .menu summary span { font-size:14px; margin-left:7px; }
-.dropdown { position:absolute; top:100%; left:54.5px; transform:translateX(-50%); display:flex; flex-direction:column; flex-wrap:wrap; align-items:stretch; margin-left:auto; margin-right:auto; min-width:144px; padding:10px; background:#f4f0e7; border:1px solid #071b2e25; border-top:3px solid #d42930; box-shadow:0 12px 24px #071b2e20; }
+.dropdown { position:absolute; top:100%; left:54.5px; transform:translateX(-50%); display:flex; flex-direction:column; flex-wrap:wrap; align-items:stretch; margin-left:auto; margin-right:auto; min-width:144px; padding:10px; background:#f3f7fa; border:1px solid #071b2e25; border-top:3px solid #d42930; box-shadow:0 12px 24px #071b2e20; }
 .dropdown a { padding:12px; font-size:20px; }
 .dropdown a[href="/teams/ecc1"] { width:auto; align-self:center; margin-right:auto; }
-.nav[data-compact="true"] { padding-inline:3vw; gap:clamp(8px,1.5vw,22px); }
+.nav[data-compact="true"] { padding-inline:2vw; gap:clamp(4px,.65vw,12px); min-height:56px; }
+.nav[data-compact="true"] > a:not(.compactBrand):not(.compactJoin),.nav[data-compact="true"] summary { display:flex; align-items:center; justify-content:center; min-height:56px; padding:10px 4px; font-size:clamp(14px,1.35vw,21px); letter-spacing:.015em; }
 .nav .compactBrand { display:flex; align-items:center; justify-content:center; flex:0 0 38px; padding:0; border:0; }
 .compactBrand img { display:block; width:32px; height:42px; object-fit:contain; }
 .nav .compactJoin { display:flex; align-items:center; gap:9px; flex-shrink:0; background:#d42930; color:white; padding:9px 17px; border:0; font-size:17px; clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%); }
@@ -66,14 +76,14 @@
  .mobilePanel { padding:4px 0 18px; }
  .mobileLabel { display:block; margin:0 0 12px; color:#536274; font:600 10px/1.3 "Barlow",sans-serif; letter-spacing:.16em; text-transform:uppercase; }
  .mobileLinks,.mobileTeamLinks { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
- .mobile a { box-sizing:border-box; min-height:44px; display:flex; align-items:center; padding:10px 12px; font:600 18px/1.2 "Barlow Condensed",sans-serif; text-transform:uppercase; border:1px solid #071b2e14; background:#fffdf8; }
+ .mobile a { box-sizing:border-box; min-height:44px; display:flex; align-items:center; padding:10px 12px; font:600 18px/1.2 "Barlow Condensed",sans-serif; text-transform:uppercase; border:1px solid #071b2e14; background:#ffffff; }
  .mobile a[aria-current="page"] { color:#d42930; background:#d429300b; border-color:#d4293050; box-shadow:inset 3px 0 #d42930; }
  .mobileTeams { margin:14px 0; border-block:1px solid #071b2e20; }
  .mobileTeams > summary { box-sizing:border-box; min-height:48px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; font:700 18px/1.2 "Barlow Condensed",sans-serif; text-transform:uppercase; }
  .mobileTeams > summary span { color:#d42930; font:400 24px/1 Arial,sans-serif; transition:transform .15s; }
  .mobileTeams[open] > summary span { transform:rotate(45deg); }
  .mobileTeamLinks { padding:0 0 12px; }
- .mobile .mobileAccount { background:#071b2e; color:#fffdf8; justify-content:space-between; border:0; }
+ .mobile .mobileAccount { background:#071b2e; color:#ffffff; justify-content:space-between; border:0; }
  .mobile a:hover { border-color:#d42930; }
  .join { min-height:44px; }
 }

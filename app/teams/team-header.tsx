@@ -41,7 +41,10 @@ export default function TeamHeader() {
     <NoticeBar />
     <div className={s.inner}>
       <a className={s.brand} href="/" aria-label="Eindhoven Cricket Club home"><img src="/images/ecc-logo.png" alt="ECC crest"/><div className={s.wordmark}><span>Eindhoven Cricket Club</span><small>Established 1915 <i aria-hidden="true">·</i> Eindhoven</small></div></a>
-      <a className={s.join} href="/join">Join ECC <span aria-hidden="true">↗</span></a>
+      <div className={s.headerActions}>
+        <a className={s.kncb} href="https://www.kncb.nl/" target="_blank" rel="noreferrer" aria-label="KNCB — Royal Dutch Cricket Association"><img src="/images/logo-kncb.png" alt="KNCB" width="48" height="54" /></a>
+        <a className={s.join} href="/join">Join ECC <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
     </div>
       <nav className={s.nav} data-compact={compact} aria-label="Main navigation">

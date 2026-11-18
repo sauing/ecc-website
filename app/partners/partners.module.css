@@ -36,7 +36,7 @@
 .choices { border:0; margin:0 0 28px; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
 .choice { cursor:pointer; min-width:0; position:relative; }
 .choice input { position:absolute; width:1px; height:1px; opacity:0; }
-.choice span { display:flex; min-height:70px; height:100%; padding:14px 12px; align-items:center; justify-content:center; text-align:center; background:#fffdf850; border:1px solid #071b2e24; font-size:15px; font-weight:600; line-height:1.4; }
+.choice span { display:flex; min-height:70px; height:100%; padding:14px 12px; align-items:center; justify-content:center; text-align:center; background:#ffffff50; border:1px solid #071b2e24; font-size:15px; font-weight:600; line-height:1.4; }
 .choice + .choice span { border-left:0; }
 .choice input:checked + span { background:var(--navy); color:var(--white); border-color:var(--navy); }
 .choice input:focus-visible + span { outline:3px solid #bd8c25; outline-offset:3px; position:relative; z-index:1; }

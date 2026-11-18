@@ -1,6 +1,6 @@
-.page { min-height:100vh; box-sizing:border-box; background:#f4f0e7; color:#071b2e; padding:24px; font:400 16px/1.6 "Barlow",sans-serif; }
+.page { min-height:100vh; box-sizing:border-box; background:#f3f7fa; color:#071b2e; padding:24px; font:400 16px/1.6 "Barlow",sans-serif; }
 .back { font:700 16px "Barlow Condensed",sans-serif; text-transform:uppercase; }
-.card,.preview { box-sizing:border-box; margin:36px auto; padding:32px; background:#fffdf8; border-top:3px solid #d42930; max-width:470px; }
+.card,.preview { box-sizing:border-box; margin:36px auto; padding:32px; background:#ffffff; border-top:3px solid #d42930; max-width:470px; }
 .preview { max-width:850px; }
 .crest { display:block; width:58px; height:74px; object-fit:contain; margin-bottom:20px; }
 .eyebrow { display:block; font:700 13px "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.16em; color:#d42930; }
